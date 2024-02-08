@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Nurse Tasks">
+
+  
+	<listeners>
+		<listener class-name="com.mohap.listeners.CustomReporter" />
+	</listeners>
+  
+        
+ <!-- 
+	<test thread-count="1" name="Login Test Cases">
+		<classes>
+			<class name="com.mohap.testcases.login.LoginTestCases"/>
+		</classes>   
+	</test> --> <!-- Login Test Cases --> 
+         
+                     
+      
+	<test thread-count="5" name="Patient Registration">
+		<classes>
+			<!--<class name="com.mohap.testcases.login.LoginTestCases"/> -->
+			<class name="com.mohap.testcases.patientRegistration.PatientRegistrationTestCases" />
+		</classes>
+	</test> <!-- Patient Registration -->
+   
+            
+
+	<test thread-count="5" name="Complete questionnaire from QA booth">
+		<classes> 
+			<!--<class name="com.mohap.testcases.login.LoginTestCases"/> -->
+			<class name="com.mohap.testcases.QABooth.CompleteQABoothquestionsTestCases" />
+		</classes>
+	</test> <!-- Complete questionnaire from QA booth -->
+
+   
+ 
+	<test thread-count="5" name="Nurse performing all tasks coming under Consult Tasks">
+		<classes>
+			<!--<class name="com.mohap.testcases.login.LoginTestCases"/> -->
+			<class name="com.mohap.testcases.ConsultTasks.AllconsultTasksTestCases" />
+		</classes>
+	</test> <!-- Nurse performing all tasks coming under Consult Tasks -->
+
+ 
+ 
+
+</suite> <!-- Suite -->
+
+
+
+    

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke" verbose="8">
+	<listeners>
+		<listener class-name="com.telus.listeners.CustomReporter" />
+		<listener class-name="com.telus.listeners.RetryListener" />
+	</listeners>
+
+	<test name="BeforeSuite Configuration">
+		<classes>
+			<class name="com.telus.core.SuiteConfiguration">
+			</class>
+		</classes>
+	</test>
+	<test name="AdminTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="nodeURL" value="" />
+		<classes>
+			<class name="com.telus.tests.web.AdminTest">
+				<methods>
+					<include name="adminTest_1" />
+					<include name="adminTest_2" />
+					<include name="adminTest_3" />
+					<include name="adminTest_4" />
+				</methods>
+			</class> <!-- com.telus.tests.web.AdminTest -->
+		</classes>
+	</test>
+	<test name="UserTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="nodeURL" value="" />
+		<classes>
+			<class name="com.telus.tests.web.UserTest">
+				<methods>
+					<include name="userTest_1" />
+					<include name="userTest_2" />
+					<include name="userTest_3" />
+					<include name="userTest_4" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="AdminTest_aWeb">
+		<parameter name="browser" value="mobile_chrome_android" />
+		<parameter name="nodeURL"
+			value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="deviceOrientation" value="PORTRAIT" />
+		<classes>
+			<class name="com.telus.tests.mobile.web.AdminTest_aWeb">
+				<methods>
+					<include name="adminMobileTest_1" />
+					<include name="adminMobileTest_2" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="UserTest_aNative">
+		<parameter name="browser" value="mobile_native_android" />
+		<parameter name="nodeURL"
+			value="http://127.0.0.1:4723/wd/hub" />
+		<parameter name="deviceOrientation" value="PORTRAIT" />
+		<classes>
+			<class name="com.telus.tests.mobile.nativee.UserTest_aNative">
+				<methods>
+					<include name="userMobileTest_1" />
+					<include name="userMobileTest_2" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> <!-- Smoke -->

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Suite">
+
+
+<test thread-count="2" parallel="classes" name="TestParellel">
+    <classes>
+      <class name="com.mohap.testcases.login.LoginTestCases"/>
+ <class name="com.mohap.testcases.patientRegistration.PatientRegistrationTestCases"/>
+<class name="com.mohap.testcases.QABooth.CompleteQABoothquestionsTestCases" />
+ 
+    </classes>
+ </test> <!-- TestParellel -->
+
+			
+
+    
+
+
+ 
+
+
+</suite> <!-- Suite -->
